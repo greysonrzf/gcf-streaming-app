@@ -4,7 +4,7 @@ import IconLoading from 'react-native-vector-icons/Fontisto';
 import IconDots from 'react-native-vector-icons/FontAwesome';
 
 export const Container = styled(LinearGradient).attrs({
-  colors: ['#000', '#fff'],
+  colors: ['#000', '#002354'],
 })`
   flex: 1;
 `;
