@@ -4,7 +4,7 @@ import IconLoading from 'react-native-vector-icons/Fontisto';
 import IconDots from 'react-native-vector-icons/FontAwesome';
 
 export const Container = styled(LinearGradient).attrs({
-  colors: ['#000', '#002354'],
+  colors: ['#000', '#000'],
 })`
   flex: 1;
 `;
@@ -15,19 +15,24 @@ export const PodcastList = styled.FlatList.attrs({
   },
 })``;
 
-export const PageBar = styled.View`
+export const PageBar = styled(LinearGradient).attrs({
+  colors: ['#00241e', '#097967', '#00ffaf'],
+  start: { x: 0, y: 0 },
+  end: { x: 1, y: 0 },
+})`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 60px;
+  height: 65px;
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: 10px;
 `;
 
 export const PageTitle = styled.Text`
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
   text-align: left;
   color: #fff;
@@ -73,7 +78,7 @@ export const Podcast = styled.TouchableOpacity.attrs({
   justify-content: space-between;
   padding: 10px 16px;
   margin: 10px 10px 0;
-  background: #000;
+  background: #191919;
   border-radius: 25px;
   opacity: 0.9;
 `;

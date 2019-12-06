@@ -4,7 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import IconPlay from 'react-native-vector-icons/Entypo';
 
 export const Container = styled(LinearGradient).attrs({
-  colors: ['#fff', '#D9E5FE'],
+  colors: ['#000', '#000'],
 })`
   flex: 1;
 `;
@@ -30,7 +30,7 @@ export const Background = styled.ImageBackground`
   position: absolute;
   width: 100%;
   height: ${320 + getStatusBarHeight()}px;
-  opacity: 0.2;
+  opacity: 0.1;
 `;
 
 export const BackButton = styled.TouchableOpacity.attrs({
@@ -44,7 +44,7 @@ export const BackButton = styled.TouchableOpacity.attrs({
 export const Cover = styled.Image`
   width: 200px;
   height: 200px;
-  border-radius: 8px;
+  border-radius: 10px;
 `;
 
 export const PodcastTitle = styled.Text`
@@ -61,10 +61,11 @@ export const Count = styled.Text`
 export const PlayButton = styled.TouchableOpacity.attrs({
   activeOpacity: 0.8,
 })`
-  height: 45px;
-  background: #0448b4;
-  margin: 15px 140px 0;
-  border-radius: 25px;
+  height: 68px;
+  width: 68px;
+  background: #00eca1;
+  margin: 15px 41% 0;
+  border-radius: 50px;
   elevation: 10;
 
   align-self: stretch;
@@ -80,23 +81,25 @@ export const PlayButtonText = styled.Text`
 `;
 
 export const PlayButtonIcon = styled(IconPlay).attrs({
-  color: '#fff',
-  size: 24,
+  color: '#000',
+  size: 28,
 })``;
 
 export const Episode = styled.TouchableOpacity`
-  margin-top: 20px;
-  padding: 0 20px;
+  margin-top: 15px;
+  padding: 15px 20px;
+  background: #191919;
+  border-radius: 10px;
 `;
 
 export const Title = styled.Text`
   font-size: 16px;
   font-weight: bold;
-  color: ${({ active }) => (active ? '#0448b4' : '#000')};
+  color: ${({ active }) => (active ? '#00eca1' : '#fff')};
 `;
 
 export const Author = styled.Text`
-  color: #666666;
+  color: #777;
   font-size: 14px;
   margin-top: 3px;
 `;
