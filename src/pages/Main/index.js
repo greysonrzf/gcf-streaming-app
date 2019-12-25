@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, View, ActivityIndicator } from 'react-native';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PodcastsActions from '../../store/ducks/podcasts';
-
-import { View, ActivityIndicator } from 'react-native';
 
 import {
   Container,
@@ -54,7 +52,11 @@ class Main extends Component {
     const { podcasts } = this.props;
     return (
       <Container>
-        <StatusBar barStyle="light-content" backgroundColor="#000" />
+        <StatusBar
+          barStyle="light-content"
+          translucent={true}
+          backgroundColor={'transparent'}
+        />
         <PodcastList
           ListHeaderComponent={() => (
             <View>
@@ -92,7 +94,4 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch =>
   bindActionCreators(PodcastsActions, dispatch);
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

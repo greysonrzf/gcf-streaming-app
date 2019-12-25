@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     height: 70,
     alignSelf: 'stretch',
 
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingBottom: 5,
 
-    shadowColor: '#000',
+    shadowColor: '#fff',
     shadowOffset: {
       width: 0,
       height: 5,
@@ -40,14 +40,14 @@ export default styles;
 // `;
 
 export const CoverBackground = styled.Image.attrs({
-  blurRadius: 5,
+  // blurRadius: 9,
 })`
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
-  opacity: 0.15;
+  opacity: 0;
 `;
 
 export const EpisodeInfo = styled.View``;
@@ -55,12 +55,12 @@ export const EpisodeInfo = styled.View``;
 export const Title = styled.Text`
   font-size: 14px;
   font-weight: bold;
-  color: #000;
+  color: #fff;
 `;
 
 export const Author = styled.Text`
   font-size: 12px;
-  color: #444;
+  color: #00eca1;
   margin-top: 3px;
 `;
 
@@ -75,6 +75,6 @@ export const ControlButton = styled.TouchableOpacity.attrs({
 `;
 
 export const ControlIcon = styled(Icon).attrs({
-  color: '#222',
+  color: '#00eca1',
   size: 32,
 })``;

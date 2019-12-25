@@ -1,4 +1,4 @@
-package com.showdafestreaming;
+package com.gracefy;
 
 import android.app.Application;
 import android.util.Log;
@@ -36,8 +36,7 @@ public class MainApplication extends Application implements ReactApplication {
       // Packages that cannot be autolinked yet can be added manually here, for
       // example:
       // packages.add(new MyReactNativePackage());
-      // packages.add(new CodePush(BuildConfig.CODEPUSH_KEY, getApplicationContext(),
-      // BuildConfig.DEBUG));
+      packages.add(new CodePush(BuildConfig.CODEPUSH_KEY, MainApplication.this, BuildConfig.DEBUG));
       return packages;
     }
 
