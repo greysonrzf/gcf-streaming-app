@@ -25,9 +25,8 @@ export const PageBar = styled(LinearGradient).attrs({
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 65px;
-  padding-left: 20px;
-  padding-right: 20px;
+  height: 85px;
+  padding: 30px 20px 10px;
   margin-bottom: 10px;
 `;
 
@@ -55,7 +54,7 @@ export const Error = styled.View`
 `;
 
 export const ErrorText = styled.Text`
-  color: #fff;
+  color: #000;
   font-size: 14px;
   font-weight: bold;
   width: 100%;
@@ -63,7 +62,7 @@ export const ErrorText = styled.Text`
 `;
 
 export const ErrorSubText = styled.Text`
-  color: #fff;
+  color: #000;
   font-size: 14px;
   font-weight: normal;
   width: 100%;
@@ -76,17 +75,23 @@ export const Podcast = styled.TouchableOpacity.attrs({
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 16px;
-  margin: 10px 10px 0;
+  padding: 12px 20px 12px 25px;
+  margin: 20px 10px 0;
   background: #191919;
-  border-radius: 25px;
-  opacity: 0.9;
+  border-radius: 10px;
+  opacity: 1;
+  border-style: solid;
+  border-left-color: #00ff99;
+  border-left-width: 8px;
 `;
 
 export const Cover = styled.Image`
   width: 75px;
   height: 75px;
-  border-radius: 19px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 10px;
 `;
 
 export const Info = styled.View`

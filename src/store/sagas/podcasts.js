@@ -5,7 +5,7 @@ import PodcastActions from '../ducks/podcasts';
 
 export function* load() {
   try {
-    const response = yield call(api.get, '/podcasts');
+    const response = yield call(api.get, '/gracefy');
 
     yield put(PodcastActions.loadSuccess(response.data));
   } catch (err) {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StatusBar} from 'react-native'
+import { StatusBar } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { connect } from 'react-redux';
@@ -42,7 +42,11 @@ class Podcasts extends Component {
 
     return (
       <Container>
-        <StatusBar barStyle='light-content' backgroundColor='#000' />
+        <StatusBar
+          barStyle="light-content"
+          translucent={true}
+          backgroundColor={'transparent'}
+        />
         <EpisodeList
           ListHeaderComponent={() => (
             <PodcastDetails>
@@ -92,7 +96,4 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch =>
   bindActionCreators(PlayerActions, dispatch);
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Podcasts);
+export default connect(mapStateToProps, mapDispatchToProps)(Podcasts);

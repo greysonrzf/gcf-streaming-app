@@ -52,7 +52,11 @@ class Main extends Component {
     const { podcasts } = this.props;
     return (
       <Container>
-        <StatusBar barStyle="light-content" backgroundColor="#000" />
+        <StatusBar
+          barStyle="light-content"
+          translucent={true}
+          backgroundColor={'transparent'}
+        />
         <PodcastList
           ListHeaderComponent={() => (
             <View>

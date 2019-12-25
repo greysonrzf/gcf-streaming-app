@@ -16,7 +16,7 @@ export const EpisodeList = styled.FlatList.attrs({
 export const PodcastDetails = styled.View`
   padding: 0 0 20px;
   align-items: center;
-  padding-top: ${getStatusBarHeight() + 10}px;
+  padding-top: ${getStatusBarHeight() + 30}px;
 `;
 
 export const BackgroundGradient = styled.View`
@@ -38,7 +38,7 @@ export const BackButton = styled.TouchableOpacity.attrs({
 })`
   position: absolute;
   left: 30px;
-  top: ${getStatusBarHeight() + 10}px;
+  top: ${getStatusBarHeight() + 30}px;
 `;
 
 export const Cover = styled.Image`
@@ -64,7 +64,7 @@ export const PlayButton = styled.TouchableOpacity.attrs({
   height: 68px;
   width: 68px;
   background: #00eca1;
-  margin: 15px 41% 0;
+  margin: -10px 0 0 75%;
   border-radius: 50px;
   elevation: 10;
 
