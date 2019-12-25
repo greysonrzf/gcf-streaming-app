@@ -15,7 +15,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    OneSignal.init('aa6b246a-cc5c-4eb4-a593-4cc25d89ad71');
+    OneSignal.init('5f7fd0fe-8ce3-41ab-9f42-e260a6090f95');
 
     OneSignal.addEventListener('received', this.onReceived);
     OneSignal.addEventListener('opened', this.onOpened);
