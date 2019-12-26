@@ -15,34 +15,6 @@ export const PodcastList = styled.FlatList.attrs({
   },
 })``;
 
-export const PageBar = styled(LinearGradient).attrs({
-  colors: ['#00241e', '#097967', '#00ffaf'],
-  start: { x: 0, y: 0 },
-  end: { x: 1, y: 0 },
-})`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 85px;
-  padding: 30px 20px 10px;
-  margin-bottom: 10px;
-`;
-
-export const PageTitle = styled.Text`
-  font-size: 25px;
-  font-weight: bold;
-  text-align: left;
-  color: #fff;
-`;
-
-export const PageSubtitle = styled.Text`
-  font-size: 22px;
-  font-weight: normal;
-  color: #000;
-`;
-
 export const Error = styled.View`
   flex-direction: column;
   align-items: center;
@@ -54,7 +26,7 @@ export const Error = styled.View`
 `;
 
 export const ErrorText = styled.Text`
-  color: #000;
+  color: #fff;
   font-size: 14px;
   font-weight: bold;
   width: 100%;
@@ -62,7 +34,7 @@ export const ErrorText = styled.Text`
 `;
 
 export const ErrorSubText = styled.Text`
-  color: #000;
+  color: #fff;
   font-size: 14px;
   font-weight: normal;
   width: 100%;
@@ -76,7 +48,7 @@ export const Podcast = styled.TouchableOpacity.attrs({
   align-items: center;
   justify-content: space-between;
   padding: 12px 20px 12px 25px;
-  margin: 20px 10px 0;
+  margin: 10px 10px 0;
   background: #191919;
   border-radius: 10px;
   opacity: 1;
@@ -86,11 +58,11 @@ export const Podcast = styled.TouchableOpacity.attrs({
 `;
 
 export const Cover = styled.Image`
-  width: 75px;
-  height: 75px;
-  border-top-left-radius: 30px;
+  width: 65px;
+  height: 65px;
+  border-top-left-radius: 25px;
   border-top-right-radius: 10px;
-  border-bottom-right-radius: 30px;
+  border-bottom-right-radius: 25px;
   border-bottom-left-radius: 10px;
 `;
 
@@ -101,19 +73,19 @@ export const Info = styled.View`
 
 export const Title = styled.Text`
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 `;
 
 export const Artist = styled.Text`
   color: #555;
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 3px;
 `;
 
 export const Count = styled.Text`
   color: #888;
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 3px;
 `;
 

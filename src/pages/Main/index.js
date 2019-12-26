@@ -59,15 +59,7 @@ class Main extends Component {
         />
         <PodcastList
           ListHeaderComponent={() => (
-            <View>
-              <PageBar>
-                <PageTitle>Gracefy</PageTitle>
-                {podcasts.loading && (
-                  <ActivityIndicator size="small" color="#fff" />
-                )}
-              </PageBar>
-              {podcasts.error && this.renderError()}
-            </View>
+            <View>{podcasts.error && this.renderError()}</View>
           )}
           data={podcasts.data}
           keyExtractor={podcast => String(podcast.id)}

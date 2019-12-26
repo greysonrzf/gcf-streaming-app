@@ -1,4 +1,4 @@
 <resources>
-	<string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">deployment-key-here</string>
+	<string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">r2QiF8N4ebgHekyMyDOAS8FHiaEKsDoYKqWPU</string>
     <string name="app_name">Gracefy</string>
 </resources>
