@@ -55,7 +55,7 @@ export const PodcastTitle = styled.Text`
 `;
 
 export const Count = styled.Text`
-  color: #92c2fe;
+  color: #00eca1;
 `;
 
 export const PlayButton = styled.TouchableOpacity.attrs({
