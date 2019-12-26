@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PodcastsActions from '../../store/ducks/podcasts';
 
+import Header from '../../components/Header';
+
 import {
   Container,
   Error,
@@ -57,6 +59,7 @@ class Main extends Component {
           translucent={true}
           backgroundColor={'transparent'}
         />
+        <Header />
         <PodcastList
           ListHeaderComponent={() => (
             <View>{podcasts.error && this.renderError()}</View>
