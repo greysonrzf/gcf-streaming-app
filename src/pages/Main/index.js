@@ -23,6 +23,7 @@ import {
   Artist,
   Count,
   DotsIcon,
+  List,
 } from './styles';
 
 class Main extends Component {
@@ -60,6 +61,7 @@ class Main extends Component {
           backgroundColor={'transparent'}
         />
         <Header />
+
         <PodcastList
           ListHeaderComponent={() => (
             <View>{podcasts.error && this.renderError()}</View>

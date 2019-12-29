@@ -13,7 +13,7 @@ export const PageBar = styled(LinearGradient).attrs({
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 85px;
+  height: 80px;
   padding: 30px 20px 10px;
   margin-bottom: 0px;
 `;
