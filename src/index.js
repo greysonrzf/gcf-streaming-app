@@ -9,6 +9,7 @@ import OneSignal from 'react-native-onesignal';
 import store from './store';
 import Routes from './routes';
 
+import Header from './components/Header';
 import Player from './components/Player';
 
 class App extends Component {

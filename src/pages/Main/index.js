@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PodcastsActions from '../../store/ducks/podcasts';
 
+import Header from '../../components/Header';
+
 import {
   Container,
   Error,
@@ -21,6 +23,7 @@ import {
   Artist,
   Count,
   DotsIcon,
+  List,
 } from './styles';
 
 class Main extends Component {
@@ -57,17 +60,11 @@ class Main extends Component {
           translucent={true}
           backgroundColor={'transparent'}
         />
+        <Header />
+
         <PodcastList
           ListHeaderComponent={() => (
-            <View>
-              <PageBar>
-                <PageTitle>Gracefy</PageTitle>
-                {podcasts.loading && (
-                  <ActivityIndicator size="small" color="#fff" />
-                )}
-              </PageBar>
-              {podcasts.error && this.renderError()}
-            </View>
+            <View>{podcasts.error && this.renderError()}</View>
           )}
           data={podcasts.data}
           keyExtractor={podcast => String(podcast.id)}

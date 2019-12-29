@@ -55,14 +55,14 @@ export const PodcastTitle = styled.Text`
 `;
 
 export const Count = styled.Text`
-  color: #92c2fe;
+  color: #00eca1;
 `;
 
 export const PlayButton = styled.TouchableOpacity.attrs({
   activeOpacity: 0.8,
 })`
-  height: 68px;
-  width: 68px;
+  height: 55px;
+  width: 55px;
   background: #00eca1;
   margin: -10px 0 0 75%;
   border-radius: 50px;
@@ -83,23 +83,25 @@ export const PlayButtonText = styled.Text`
 export const PlayButtonIcon = styled(IconPlay).attrs({
   color: '#000',
   size: 28,
-})``;
+})`
+  margin-left: 3px;
+`;
 
 export const Episode = styled.TouchableOpacity`
-  margin-top: 15px;
+  margin: 10px 5px 0;
   padding: 15px 20px;
   background: #191919;
   border-radius: 10px;
 `;
 
 export const Title = styled.Text`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: ${({ active }) => (active ? '#00eca1' : '#fff')};
 `;
 
 export const Author = styled.Text`
   color: #777;
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 3px;
 `;
