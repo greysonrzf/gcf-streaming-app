@@ -83,7 +83,9 @@ export const PlayButtonText = styled.Text`
 export const PlayButtonIcon = styled(IconPlay).attrs({
   color: '#000',
   size: 28,
-})``;
+})`
+  margin-left: 3px;
+`;
 
 export const Episode = styled.TouchableOpacity`
   margin: 10px 5px 0;
