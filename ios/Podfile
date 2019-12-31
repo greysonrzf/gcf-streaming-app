@@ -34,6 +34,8 @@ target 'showdafestreaming' do
 
   pod 'react-native-onesignal', :path => '../node_modules/react-native-onesignal'
 
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
+
   target 'showdafestreamingTests' do
     inherit! :search_paths
     # Pods for testing

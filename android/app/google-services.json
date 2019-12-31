@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "898908733351",
+    "firebase_url": "https://gracefy.firebaseio.com",
+    "project_id": "gracefy",
+    "storage_bucket": "gracefy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898908733351:android:b6a36a1a87dcfcf0578082",
+        "android_client_info": {
+          "package_name": "com.gracefy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898908733351-3m5drk9bm6gl96hdb1vtf77ar6s3fjam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2FrBSlLzQZrmLnAJfj3fjdGMeuiIAZr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898908733351-3m5drk9bm6gl96hdb1vtf77ar6s3fjam.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
