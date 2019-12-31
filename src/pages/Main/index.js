@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StatusBar, View, ActivityIndicator } from 'react-native';
+import { StatusBar, View, ActivityIndicator, Platform } from 'react-native';
+import firebase from 'react-native-firebase';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -53,6 +54,11 @@ class Main extends Component {
 
   render() {
     const { podcasts } = this.props;
+    const Banner = firebase.admob.Banner;
+    const AdRequest = firebase.admob.AdRequest;
+    const request = new AdRequest();
+
+    const unitId = 'ca-app-pub-2136115240763177/5533303564';
     return (
       <Container>
         <StatusBar
@@ -79,6 +85,14 @@ class Main extends Component {
               <DotsIcon name="angle-right" />
             </Podcast>
           )}
+        />
+        <Banner
+          unitId={unitId}
+          size={'SMART_BANNER'}
+          request={request.build()}
+          onAdLoaded={() => {
+            console.log('Advert loaded');
+          }}
         />
       </Container>
     );
