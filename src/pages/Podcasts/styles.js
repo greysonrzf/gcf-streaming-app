@@ -64,7 +64,7 @@ export const PlayButton = styled.TouchableOpacity.attrs({
   height: 55px;
   width: 55px;
   background: #00eca1;
-  margin: -10px 0 0 75%;
+  margin: -6px 0 0 75%;
   border-radius: 50px;
   elevation: 10;
 
