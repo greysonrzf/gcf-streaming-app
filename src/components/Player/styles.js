@@ -60,7 +60,7 @@ export const Title = styled.Text`
 
 export const Author = styled.Text`
   font-size: 12px;
-  color: #00eca1;
+  color: #33c1ff;
   margin-top: 3px;
 `;
 
@@ -75,6 +75,6 @@ export const ControlButton = styled.TouchableOpacity.attrs({
 `;
 
 export const ControlIcon = styled(Icon).attrs({
-  color: '#00eca1',
+  color: '#33c1ff',
   size: 32,
 })``;

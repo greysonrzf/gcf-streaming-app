@@ -4,7 +4,7 @@ import IconLoading from 'react-native-vector-icons/Fontisto';
 import IconDots from 'react-native-vector-icons/FontAwesome';
 
 export const PageBar = styled(LinearGradient).attrs({
-  colors: ['#00241e', '#097967', '#00ffaf'],
+  colors: ['#002c57', '#0092d2', '#4ecfff'],
   start: { x: 0, y: 0 },
   end: { x: 1, y: 0 },
 })`
