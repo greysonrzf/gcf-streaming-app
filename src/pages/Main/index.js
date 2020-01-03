@@ -76,7 +76,7 @@ class Main extends Component {
               <Cover source={{ uri: podcast.cover }} />
               <Info>
                 <Title>{podcast.title}</Title>
-                <Artist>{podcast.artist}</Artist>
+                <Artist type={podcast.artist}>{podcast.artist}</Artist>
                 <Count>{podcast.tracks.length} episódios</Count>
               </Info>
               <DotsIcon name="angle-right" />
