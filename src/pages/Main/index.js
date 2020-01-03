@@ -75,11 +75,14 @@ class Main extends Component {
           data={podcasts.data}
           keyExtractor={podcast => String(podcast.id)}
           renderItem={({ item: podcast }) => (
-            <Podcast onPress={() => this.handlePodcastPress(podcast)}>
+            <Podcast
+              color={podcast.color}
+              onPress={() => this.handlePodcastPress(podcast)}
+            >
               <Cover source={{ uri: podcast.cover }} />
               <Info>
                 <Title>{podcast.title}</Title>
-                <Artist>{podcast.artist}</Artist>
+                <Artist type={podcast.artist}>{podcast.artist}</Artist>
                 <Count>{podcast.tracks.length} episódios</Count>
               </Info>
               <DotsIcon name="angle-right" />
