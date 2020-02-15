@@ -70,32 +70,49 @@ class Main extends Component {
 
         <PodcastList
           ListHeaderComponent={() => (
-            <View>{podcasts.error && this.renderError()}</View>
+            <>
+              <View>{podcasts.error && this.renderError()}</View>
+            </>
           )}
           data={podcasts.data}
           keyExtractor={podcast => String(podcast.id)}
           renderItem={({ item: podcast }) => (
-            <Podcast
-              color={podcast.color}
-              onPress={() => this.handlePodcastPress(podcast)}
-            >
-              <Cover source={{ uri: podcast.cover }} />
-              <Info>
-                <Title>{podcast.title}</Title>
-                <Artist type={podcast.artist}>{podcast.artist}</Artist>
-                <Count>{podcast.tracks.length} episódios</Count>
-              </Info>
-              <DotsIcon name="angle-right" />
-            </Podcast>
+            <>
+              <Podcast
+                color={podcast.color}
+                onPress={() => this.handlePodcastPress(podcast)}
+              >
+                <Cover source={{ uri: podcast.cover }} />
+                <Info>
+                  <Title>{podcast.title}</Title>
+                  <Artist type={podcast.artist}>{podcast.artist}</Artist>
+                  <Count>{podcast.tracks.length} episódios</Count>
+                </Info>
+                <DotsIcon name="angle-right" />
+              </Podcast>
+              <View
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  width: '100%',
+                  paddingLeft: 20,
+                  paddingRight: 20,
+                  paddingTop: 10,
+                  borderRadius: 40,
+                }}
+              >
+                <Banner
+                  unitId={unitId}
+                  size={'SMART_BANNER'}
+                  request={request.build()}
+                  onAdLoaded={() => {
+                    console.log('Advert loaded');
+                  }}
+                />
+              </View>
+            </>
           )}
-        />
-        <Banner
-          unitId={unitId}
-          size={'SMART_BANNER'}
-          request={request.build()}
-          onAdLoaded={() => {
-            console.log('Advert loaded');
-          }}
         />
       </Container>
     );
