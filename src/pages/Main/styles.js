@@ -63,11 +63,6 @@ export const Cover = styled.Image`
   height: 65px;
   border-radius: 40px;
   margin: 0 10px 0 0;
-  /* margin-left: -18%; */
-  /* border-top-left-radius: 25px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 10px; */
 `;
 
 export const Info = styled.View`
@@ -82,7 +77,7 @@ export const Title = styled.Text`
 `;
 
 export const Artist = styled.Text`
-  color: #555;
+  color: ${({ type }) => (type === 'Adoração' ? '#555' : '#555')};
   font-size: 14px;
   margin-top: 3px;
 `;

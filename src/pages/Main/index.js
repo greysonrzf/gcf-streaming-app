@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StatusBar, View, ActivityIndicator } from 'react-native';
+import { StatusBar, View, ActivityIndicator, Platform } from 'react-native';
+import firebase from 'react-native-firebase';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -53,6 +54,11 @@ class Main extends Component {
 
   render() {
     const { podcasts } = this.props;
+    const Banner = firebase.admob.Banner;
+    const AdRequest = firebase.admob.AdRequest;
+    const request = new AdRequest();
+
+    const unitId = 'ca-app-pub-2136115240763177/5533303564';
     return (
       <Container>
         <StatusBar
@@ -64,23 +70,48 @@ class Main extends Component {
 
         <PodcastList
           ListHeaderComponent={() => (
-            <View>{podcasts.error && this.renderError()}</View>
+            <>
+              <View>{podcasts.error && this.renderError()}</View>
+            </>
           )}
           data={podcasts.data}
           keyExtractor={podcast => String(podcast.id)}
           renderItem={({ item: podcast }) => (
-            <Podcast
-              color={podcast.color}
-              onPress={() => this.handlePodcastPress(podcast)}
-            >
-              <Cover source={{ uri: podcast.cover }} />
-              <Info>
-                <Title>{podcast.title}</Title>
-                <Artist>{podcast.artist}</Artist>
-                <Count>{podcast.tracks.length} episódios</Count>
-              </Info>
-              <DotsIcon name="angle-right" />
-            </Podcast>
+            <>
+              <Podcast
+                color={podcast.color}
+                onPress={() => this.handlePodcastPress(podcast)}
+              >
+                <Cover source={{ uri: podcast.cover }} />
+                <Info>
+                  <Title>{podcast.title}</Title>
+                  <Artist type={podcast.artist}>{podcast.artist}</Artist>
+                  <Count>{podcast.tracks.length} episódios</Count>
+                </Info>
+                <DotsIcon name="angle-right" />
+              </Podcast>
+              <View
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  width: '100%',
+                  paddingLeft: 20,
+                  paddingRight: 20,
+                  paddingTop: 10,
+                  borderRadius: 40,
+                }}
+              >
+                <Banner
+                  unitId={unitId}
+                  size={'SMART_BANNER'}
+                  request={request.build()}
+                  onAdLoaded={() => {
+                    console.log('Advert loaded');
+                  }}
+                />
+              </View>
+            </>
           )}
         />
       </Container>
